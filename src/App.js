@@ -4,6 +4,7 @@ import './App.css';
 import BalloonPic from './Balloon.js';
 import Clock from './Clock.js';
 import Toggle from './Toggle.js';
+import Greeting from './Greeting.js'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
     var url3 = "https://www.dollartree.com/assets/product_images_2016/styles/alternate_large/174788.jpg"
     return (
       <div className="App">
+        <h1>Hi!!!</h1>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">{this.props.title}</h1>
@@ -24,6 +26,7 @@ class App extends Component {
         <BalloonPic title="One Balon" url={url3}/>
         <Clock />
         <Toggle/>
+        <Greeting isLoggedIn={true}/>
       </div>
     );
   }
