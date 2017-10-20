@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import BalloonPic from './Balloon.js';
 import Clock from './Clock.js';
+import Toggle from './Toggle.js';
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
         <BalloonPic title="Balons" url={url2}/>
         <BalloonPic title="One Balon" url={url3}/>
         <Clock />
+        <Toggle/>
       </div>
     );
   }
