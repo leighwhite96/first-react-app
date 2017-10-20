@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import ShowTime from './ShowTime';
 
 class Clock extends Component {
   constructor(props){
@@ -19,17 +20,27 @@ class Clock extends Component {
   componentWillUnmount(){
     clearInterval(this.timerID);
   }
+  /* this doesn't go well with asynchronous requests.
 
   tick() {
     this.setState({
       date: new Date()
     });
 
-  }
+  */
+
+ tick() {
+   this.setState((prevState,props) => ({
+     date: new Date()
+
+   }));
+ }
+
   render(){
     return (
       <div>
-        <h2>It is: {this.state.date.toLocaleTimeString()}</h2>
+        <h1>It is: </h1>
+        <ShowTime time={this.state.date.toLocaleTimeString()}/>
       </div>
     )
   }
