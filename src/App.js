@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import BalloonPic from './Balloon.js'
+import BalloonPic from './Balloon.js';
+import Clock from './Clock.js';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
         <BalloonPic title="Balloons" url={url}/>
         <BalloonPic title="Balons" url={url2}/>
         <BalloonPic title="One Balon" url={url3}/>
+        <Clock />
       </div>
     );
   }
