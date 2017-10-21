@@ -23,7 +23,7 @@ class Toggle extends Component {
   render() {
     return (
       <div>
-        <h3>{this.state.count == 0 ? 'No clicks' : `Number of clicks: ${this.state.count}`}</h3>
+        <h3>{this.state.count === 0 ? 'No clicks' : `Number of clicks: ${this.state.count}`}</h3>
         <button onClick={this.handleClick}>
           {this.state.isToggleOn ? 'ON' : 'OFF'}
         </button>
